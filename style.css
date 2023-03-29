@@ -1,0 +1,549 @@
+/* for the external box effect */
+
+*{
+
+   
+
+    box-sizing: border-box;
+
+    margin: 0%;
+
+    font-family: 'fira sans' , sans-serif;
+  
+ 
+
+}
+
+   
+
+
+
+   /* designing of body section of page */
+
+body {
+
+    padding-top: 0rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 100vh;
+
+
+
+   /* change background colour */
+
+    /* background: var(--dark); */
+
+    background-image: linear-gradient(to right, white, rgb(3, 44, 0));
+
+   /* change the design colour like buttons and bars */
+
+    color: black;
+
+
+
+}
+
+ 
+
+ 
+
+   /* designing of header section of page (to-do list heading, bar, add button) */
+
+header {
+
+ 
+
+    padding: 2rem 1rem;
+
+    max-width: 800px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    align-content: center;
+
+ 
+
+}
+
+ 
+
+
+
+   /* for heading To-Do List */
+
+header h1 {
+
+ 
+
+    font-size: 2.5rem;
+
+    font-weight: 300;
+
+    background-image: linear-gradient(to right, rgb(1, 40, 1), rgb(17, 8, 8));
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    cursor: default;
+
+    margin-bottom: 1rem;
+
+   
+
+
+
+}
+
+
+
+/* for heading plan */
+
+header h2 {
+
+ 
+
+  font-size: 1.5rem;
+
+  font-weight: 200;
+
+  background-image: linear-gradient(to right, rgb(19, 1, 53), rgb(17, 8, 8));
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+  padding-top: 1.5rem;
+
+  margin-top: 1rem;
+
+  margin-bottom: 1rem;
+
+
+
+}
+
+ 
+
+
+
+   /* to design the form with id=new-task-form */
+
+#main-list-form {
+
+ 
+
+    display: flex;
+
+
+
+}
+
+ 
+
+ 
+
+   /* for input (bar, text) and buttons (add, edit, delete) */
+
+input, button {
+
+ 
+
+    appearance: none;
+
+    border: none;
+
+    outline: none;
+
+    background: none;
+
+
+
+}
+
+ 
+
+
+
+   /* for input with id=new-task-input (bar external design & input text design) */
+
+#list-input {
+
+   
+
+   /* bar design */
+
+    flex: 1 1 0%;
+
+    background-image: linear-gradient(to right, rgb(252, 254, 252), rgb(250, 247, 247));
+
+   
+
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    margin-right: 1rem;
+
+
+
+   /* design of text enterd in bar */
+
+    color: black;
+
+    font-size: 1.25rem;
+
+
+
+}
+
+ 
+
+   /* for input with id=new-task-input (placeholder(add yoyr task) design) */
+
+#list-input::placeholder {
+
+
+
+    color: grey;
+
+    font-weight: lighter;
+
+
+
+}
+
+ 
+
+   /* for input with id=new-task-submit (add button) */
+
+#list-submit {
+
+    color: pink;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    background-image: linear-gradient(to right, orange, red);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+
+ 
+
+}
+
+ 
+
+
+
+#list-submit:hover {
+
+
+
+    opacity: 0.8;
+
+
+
+}
+
+ 
+
+#list-submit:active {
+
+
+
+    opacity: 0.8;
+
+
+
+}
+
+ 
+
+
+
+/* for main section of the body */
+
+main {
+
+ 
+
+    flex: 1 1 0%;
+
+    padding: 2rem 1rem;
+
+    max-width: 800px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+ 
+
+}
+
+ 
+
+/* for task bar  */
+
+.task-list {
+
+
+
+    padding: 1rem;
+
+
+
+}
+
+ 
+
+/* for task-list text */
+
+.task-list h2 {
+
+
+
+   
+
+    font-size: 1.5rem;
+
+    font-weight: 200;
+
+    background-image: linear-gradient(to right, rgb(19, 1, 53), rgb(17, 8, 8));
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+    margin-top: -2rem;  
+
+    margin-bottom: 1rem;
+
+    /* font-size: 1.6rem;
+
+    font-weight: 300;
+
+    color: var(--gray);
+
+    margin-bottom: 1rem; */
+
+
+
+}
+
+ 
+
+
+
+/* for task-list bar */
+
+#tasks .task {
+
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background-image: linear-gradient(to right, rgb(210, 199, 247), rgb(252, 246, 246));
+
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    margin-bottom: 1rem;
+
+
+
+}
+
+
+
+/* flex diamensions */
+
+#tasks .task .content {
+
+
+
+    flex: 1 1 0%;
+
+
+
+}
+
+
+
+ 
+
+/* for text format */
+
+#tasks .task  .content .text{
+
+
+
+    color: black;
+
+    font-size: 1.175rem;
+
+    width: 100%;
+
+    display: block;
+
+    transition: 0.4s;
+
+ 
+
+}
+
+ 
+
+/* color of both bars */
+
+#tasks .task .content .text:not(:read-only) {
+
+ 
+
+  color: black;
+
+
+
+}
+
+ 
+
+
+
+/* display of both bars */
+
+#tasks .task .actions {
+
+ 
+
+  display: flex;
+
+  margin: 0 -0.5rem;
+
+ 
+
+}
+
+ 
+
+
+
+/* button design and pointer  */
+
+.task .actions button {
+
+   
+
+    cursor: pointer;
+
+    margin: 0 0.5rem;
+
+    font-size: 1.125rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition: 0.4s;
+
+
+
+}
+
+ 
+
+ 
+
+/* opacity */
+
+.task .actions button:hover {
+
+   
+
+    opacity: 0.8;
+
+
+
+}
+
+ 
+
+ 
+
+/* opacity */
+
+.task .actions button:active {
+
+   
+
+    opacity: 0.6;
+
+
+
+}
+
+ 
+
+  /* for edit button */
+
+.task .actions .edit {
+
+
+
+  font-size: 1.25rem;
+
+  font-weight: 700;
+
+  background-image: linear-gradient(to right, rgb(41, 3, 94), rgb(2, 99, 41));
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  cursor: pointer;
+
+  transition: 0.5s;
+
+
+
+}
+
+ 
+
+/* color of delete button */
+
+.task .actions .delete {
+
+
+
+  background-image: linear-gradient(to right, crimson, rgb(216, 15, 109));
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  cursor: pointer;
+
+  transition: 0.5s;
+
+
+
+}
+
+ 
